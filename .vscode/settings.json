@@ -2,7 +2,9 @@
     "yaml.schemas": {
         "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-playbook.json": [
             "docker://115c47751c673adba08711033f6b8fbbba07d5a8f789abf2b9f1e74f7491c249/work/03-get_facts/get_facts.yaml?fileType%3Dfile%26containerOS%3Dlinux%26path%3D%252Fwork%252F03-get_facts%252Fget_facts.yaml",
-            "docker://115c47751c673adba08711033f6b8fbbba07d5a8f789abf2b9f1e74f7491c249/work/04-configure-assignment/configure_cisco.yaml?fileType%3Dfile%26containerOS%3Dlinux%26path%3D%252Fwork%252F04-configure-assignment%252Fconfigure_cisco.yaml"
+            "docker://115c47751c673adba08711033f6b8fbbba07d5a8f789abf2b9f1e74f7491c249/work/04-configure-assignment/configure_cisco.yaml?fileType%3Dfile%26containerOS%3Dlinux%26path%3D%252Fwork%252F04-configure-assignment%252Fconfigure_cisco.yaml",
+            "file:///c%3A/Users/Mark/Desktop/exercise-week-04-ansible/04-configure-assignment/configure_cisco.yaml",
+            "file:///c%3A/Users/Mark/Desktop/exercise-week-04-ansible/04-configure-assignment/get_facts.yaml"
         ]
     }
 }
