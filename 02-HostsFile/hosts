@@ -6,8 +6,7 @@ ansible_password=admin
 cisco
 
 [cisco]
-rtr1 ansible_host=172.26.192.3
-rtr2 ansible_host=172.26.192.4
+rtr1 ansible_host=172.27.144.3
 
 [cisco:vars]
 ansible_user=admin
@@ -16,4 +15,3 @@ ansible_connection=network_cli
 
 [dc1]
 rtr1
-rtr2
