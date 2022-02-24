@@ -1,0 +1,10 @@
+This lab provides various playbook examples for use on a cisco CSR 1000 series
+
+
+To view the Documentation for this assignment:
+
+Open 04-configure-assignment >
+
+configure_cisco.yaml 
+
+get_facts.yaml (testing purposes only)
