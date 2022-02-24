@@ -1,8 +1,10 @@
 ---
+#Used to gather device information from a defined router - Requires the router host name
 - name: gather information from routers
   hosts: rtr2
   gather_facts: no
 
+#Used to generate a banner appearing on router login - Enter the desired message in the text field 
   tasks:
       - name: Configure the login banner
         cisco.ios.ios_banner:
@@ -13,30 +15,36 @@
             bottom text
           state: present
 
+#Used to change the hostname of the specified router - Enter desired hostname in hostname field 
       - name: Change Hostname
         cisco.ios.ios_hostname:
           config:
             hostname: Router2MC
           state: merged
 
+#Used to test simple NTP config - Provide ip address in command field
       - name: Change NTP
         cisco.ios.ios_config:
           commands:
           - ntp server 8.8.8.8
 
+#Used to gather device configuration
       - name: Gather listed logging config
         cisco.ios.ios_logging_global:
           state: gathered
 
+#Enables device logging
       - name: enable logging to all
         cisco.ios.ios_logging:
           dest: on
 
+#Used to configure a loopback address on the defined host. Provide address and interface value in fields below
       - name: Set loopback IPv4 address
         cisco.ios.ios_l3_interface:
           name: loopback0
           ipv4: 1.1.1.1/32
-      
+
+#Provides sample OSPF host configuration. Various configuration options available: Cost, Priority, Area ID. Requires Interface value. Ipv4 and Ipv6      
       - name: Merge provided OSPF Interfaces configuration
         cisco.ios.ios_ospf_interfaces:
           config:
@@ -74,6 +82,7 @@
                   transmit_delay: 45
           state: merged
 
+#Sample SNMP Configuration - Provide ID, host, and port values
       - name: Apply the SNMP configuration
         cisco.ios.ios_snmp_server:
           config:
@@ -88,7 +97,8 @@
                     host: 172.26.192.4
                     udp_port: 25
           state: merged
-          
+
+#Configuration for name servers - Requires address values for defined host           
       - name: configure name servers
         cisco.ios.ios_system:
           name_servers:
